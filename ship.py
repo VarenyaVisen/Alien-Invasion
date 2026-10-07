@@ -28,13 +28,13 @@ class Ship:
 
         # Update ship's x value, not the rect.
         if self.moving_right:
-            self.rect.x += self.settings.ship_speed
+            self.x += self.settings.ship_speed
         if self.moving_left:
-            self.rect.x -= self.settings.ship_speed
+            self.x -= self.settings.ship_speed
 
         # update rect object from self.x
         self.rect.x = self.x
         
-    def bltime(self):
+    def blitme(self):
         """Draw the ship at its current location"""
         self.screen.blit(self.image, self.rect)
